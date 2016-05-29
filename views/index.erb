@@ -12,30 +12,49 @@
         <script src="js/moment.min.js"></script>
         <script src="js/bootstrap-datetimepicker.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/json-parser.js"></script>
+        <script type="text/javascript" src="js/date-picker-setup.js"></script>
         
     </head>
     <body>
         <div class="container">
-        <div class="row">
-            <div class='col-sm-6'>
-                <div class="form-group">
-                    <div class='input-group date' id='datetimepicker1'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
+    <div class='col-md-5'>
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker6'>
+                <input id="date1" type='text' class="form-control"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
             </div>
-            
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker1').datetimepicker();
-                });
-            </script>
         </div>
+    </div>
+    <div class='col-md-5'>
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker7'>
+                <input id="date2" type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
-       <div id="qunit"></div>
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Rostered Start</th>
+                <th>Actual Start</th>
+                <th>Rostered finish</th>
+                <th>Actual finish</th>
+              </tr>
+            </thead>
+            <tbody id="id01">
+            </tbody>
+        </table>
+    </div>
+    <div id="qunit"></div>
       <div id="qunit-fixture"></div>
       <script src="https://code.jquery.com/qunit/qunit-1.23.1.js"></script>
       <script src="js/tests.js"></script>
