@@ -4,61 +4,72 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Punctuality</title>
-        <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.23.1.css">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/datetimepicker.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         
+        <!-- Jquery and Bootstrap -->
+        <link rel="stylesheet" href=
+              "https://code.jquery.com/qunit/qunit-1.23.1.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>       
         <script src="js/moment.min.js"></script>
         <script src="js/bootstrap-datetimepicker.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/json-parser.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+        <!-- Calendar setup -->
         <script type="text/javascript" src="js/date-picker-setup.js"></script>
         
+        <!-- Roster and shift functions -->
+        <script type="text/javascript" src="js/date-parser.js"></script>
     </head>
-    <body>
-        <div class="container">
-    <div class='col-md-5'>
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker6'>
-                <input id="date1" type='text' class="form-control"/>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class='col-md-5'>
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker7'>
-                <input id="date2" type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-    <div class="container">
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Day</th>
-                <th>Rostered Start</th>
-                <th>Actual Start</th>
-                <th>Rostered finish</th>
-                <th>Actual finish</th>
-              </tr>
-            </thead>
-            <tbody id="id01">
-            </tbody>
-        </table>
-    </div>
-    <div id="qunit"></div>
-      <div id="qunit-fixture"></div>
-      <script src="https://code.jquery.com/qunit/qunit-1.23.1.js"></script>
-      <script src="js/tests.js"></script>
+    <body style="text-align: center;">
         
+        <!-- Calendar Table -->
+        <div class="container">
+            <h3>Select Two Dates</h3>
+            <div class='col-md-5'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker6'>
+                        <input value="2013-08-03" id="date1" type='text' class="form-control"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-5'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker7'>
+                        <input value="2016-07-28" id="date2" type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Roster Table -->
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Rostered Start</th>
+                    <th>Actual Start</th>
+                    <th>Rostered finish</th>
+                    <th>Actual finish</th>
+                  </tr>
+                </thead>
+                <tbody id="id01">
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Qunit tests -->
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <script src="https://code.jquery.com/qunit/qunit-1.23.1.js"></script>
+        <script src="js/tests.js"></script>
         
     </body>
 </html>
